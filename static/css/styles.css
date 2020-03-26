@@ -1,0 +1,14 @@
+.custom{
+    padding: 1rem !important ;
+    font-size: 15px !important ;
+    background: rgb(39,118,194);
+    background: rgb(39,118,194);
+}
+    /* background: linear-gradient(31deg, rgba(39,118,194,1) 5%, rgba(249,0,0,1) 75%);} */
+.card-headings-custom{
+    font-size: 35px  ;
+   
+    font-style: normal !important;
+   
+}
+

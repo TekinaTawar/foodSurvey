@@ -2,6 +2,9 @@ from flask import Flask, request, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import date
 
+# this is a random commen#
+
+# life is eazy
 import csvdata
 
 app = Flask(__name__)
