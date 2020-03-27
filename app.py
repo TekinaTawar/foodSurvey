@@ -91,6 +91,9 @@ def page2():
 @app.route('/page3', methods=['POST', 'GET'])
 def page3():
     # global user_beveragesXXL, user_snacksXXL, user_main_coursesXXL, user_othersXXL
+    global user_name, user_email, user_gender, user_age, user_city, user_state
+    global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
+
     if request.method == 'POST':
         user_beveragesXXL = request.form.getlist('beverages')
         user_snacksXXL = request.form.getlist('snacks')
