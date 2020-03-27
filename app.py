@@ -77,6 +77,8 @@ def index():
 @app.route('/page2', methods=['POST', 'GET'])
 def page2():
     global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
+    global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
+
     if request.method == 'POST':
         user_beveragesXL = request.form.getlist('beverages')
         user_snacksXL = request.form.getlist('snacks')
