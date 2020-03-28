@@ -50,7 +50,6 @@ class Survey(db.Model):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     global user_name, user_email, user_gender, user_age, user_city, user_state
-    global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
 
     if request.method == 'POST':
         first_name = request.form['first_name']
@@ -64,6 +63,16 @@ def index():
         user_city = request.form['city']
         user_state = request.form['state']
 
+        return redirect('/page1')
+    else:
+        return render_template('index.html')
+
+
+@app.route('/page1', methods=['POST', 'GET'])
+def page1():
+    global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
+
+    if request.method == 'POST':
         user_beveragesL = list(set(csvdata.Beverages) - set(request.form.getlist('beverages')))
         user_snacksL = list(set(csvdata.Snacks) - set(request.form.getlist('snacks')))
         user_main_coursesL = list(set(csvdata.MainCourses) - set(request.form.getlist('main_courses')))
@@ -71,7 +80,7 @@ def index():
 
         return redirect('/page2')
     else:
-        return render_template('index.html', beverages=csvdata.Beverages, snacks=csvdata.Snacks, main_courses=csvdata.MainCourses, others=csvdata.Others)
+        return render_template('page1.html', beverages=csvdata.Beverages, snacks=csvdata.Snacks, main_courses=csvdata.MainCourses, others=csvdata.Others)
 
 
 @app.route('/page2', methods=['POST', 'GET'])
