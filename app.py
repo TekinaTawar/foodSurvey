@@ -64,10 +64,10 @@ def index():
         user_city = request.form['city']
         user_state = request.form['state']
 
-        user_beveragesL = request.form.getlist('beverages')
-        user_snacksL = request.form.getlist('snacks')
-        user_main_coursesL = request.form.getlist('main_courses')
-        user_othersL = request.form.getlist('others')
+        user_beveragesL = list(set(csvdata.Beverages) - set(request.form.getlist('beverages')))
+        user_snacksL = list(set(csvdata.Snacks) - set(request.form.getlist('snacks')))
+        user_main_coursesL = list(set(csvdata.MainCourses) - set(request.form.getlist('main_courses')))
+        user_othersL = list(set(csvdata.Others) - set(request.form.getlist('others')))
 
         return redirect('/page2')
     else:
@@ -78,10 +78,10 @@ def index():
 def page2():
     global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
     if request.method == 'POST':
-        user_beveragesXL = request.form.getlist('beverages')
-        user_snacksXL = request.form.getlist('snacks')
-        user_main_coursesXL = request.form.getlist('main_courses')
-        user_othersXL = request.form.getlist('others')
+        user_beveragesXL = list(set(user_beveragesL) - set(request.form.getlist('beverages')))
+        user_snacksXL = list(set(user_snacksL) - set(request.form.getlist('snacks')))
+        user_main_coursesXL = list(set(user_main_coursesL) - set(request.form.getlist('main_courses')))
+        user_othersXL = list(set(user_othersL) - set(request.form.getlist('others')))
 
         return redirect('/page3')
     else:
