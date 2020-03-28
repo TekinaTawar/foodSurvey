@@ -1,5 +1,7 @@
 body {
     overflow-y:hidden !important;
+    margin-top: 20px !important;
+    padding: 6px 4px 6px 4px;
 }
 
 
