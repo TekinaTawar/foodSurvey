@@ -1,3 +1,8 @@
+body {
+    overflow-y:hidden !important;
+}
+
+
 .custom{
     padding: 1rem !important ;
     font-size: 15px !important ;
@@ -12,4 +17,16 @@
    
 }
 
+.vh-max{
+    height: 100vh ! important;
+}
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-sb::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.hide-sb{
+    -ms-overflow-style: none;
+}

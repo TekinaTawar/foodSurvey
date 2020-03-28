@@ -4,3 +4,4 @@ env
 # .vscode
 read.md
 __pycache__
+templates/navbar.html
