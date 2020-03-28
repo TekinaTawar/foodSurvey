@@ -1,16 +1,17 @@
-//todo: . Change background color to blue
-//todo: . Change font.
+//todo:  Change background color to blue
+//todo:  Change font.
 
-//todo: . Add back button.
-//todo: . add more padding in the profile form
-//todo: . get all the buttons outside.
-//todo: . Add * Required to html page
-//todo: . add a progress bar 
-//todo: . change first page to start
-//todo: . button pink
+
+//todo:  Add back button.
+//todo:  add more padding in the profile form
+//todo:  get all the buttons outside.
+//todo:  Add * Required to html page
+//todo:  add a progress bar 
+//todo:  button pink
 
 //? page scroll up in some cases as in age as it is down keyboard.
 
+// *  change first page to start
 // * Done
 // * email authentication
 
