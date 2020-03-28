@@ -16,87 +16,110 @@
 <body>
     <!-- Main Container -->
     <div class="container">
-        <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
-            <p class="lead">
-                Please check and *SELECT* from the remaining entries under each group that will be your *'Favourite or Most Preferred'* entry while dining outside?
-            </p>
-        </div>
         <form action="/page3" method="POST">
             <!-- CardForBeverages -->
-            <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="beverage">
-                <h1 class="display-4 mb-0">Beverages</h1>
-                <div class="d-flex align-content-start flex-wrap">
-                    {% for beverage in beverages %}
-                    <div class="cb_button2">
-                        <label>
-                            <input type="checkbox" checked name="beverages" value="{{beverage}}" />
-                            <span>{{beverage}}</span>
-                        </label>
+            <div class="vh-max overflow-auto hide-sb">
+                <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom " id="beverage">
+                    <p class="lead">
+                       Please check and <span class="font-weight-bold">SELECT</span> from the remaining entries under each group that will be your <span class="font-weight-bold">'Favourite or Most Preferred'</span> entry while dining outside?
+                    </p>
+                    <span class="card-headings-custom">Beverages</span>
+                    <div class="d-flex align-content-start flex-wrap">
+                        {% for beverage in beverages %}
+                        <div class="cb_button2">
+                            <label>
+                                <input type="checkbox" name="beverages" value="{{beverage}}" />
+                                <span>{{beverage}}</span>
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                    <p class="lead p-3">
+                        <a class="btn btn-primary btn-lg" href="#snacks" role="button">
+                            NEXT
+                        </a>
+                    </p>
                 </div>
-                <p class="lead p-3">
-                    <a class="btn btn-primary btn-lg" href="#snacks" role="button">
-                        NEXT
-                    </a>
-                </p>
             </div>
             <!-- CardForBeverages-Ends -->
 
             <!-- CardForSnacks-->
-            <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="snacks">
-                <h3 class="display-4 mb-0">Snacks</h3>
-                <div class="d-flex align-content-start flex-wrap">
-                    {% for snack in snacks %}
-                    <div class="cb_button2">
-                        <label>
-                            <input type="checkbox" checked name="snacks" value="{{snack}}" />
-                            <span>{{snack}}</span>
-                        </label>
+            <div class="vh-max overflow-auto hide-sb">
+                <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="snacks">
+                    <p class="lead">
+                       Please check and <span class="font-weight-bold">SELECT</span> from the remaining entries under each group that will be your <span class="font-weight-bold">'Favourite or Most Preferred'</span> entry while dining outside?
+                    </p>
+                    <h3 class="display-4 mb-0">Snacks</h3>
+                    <div class="d-flex align-content-start flex-wrap">
+                        {% for snack in snacks %}
+                        <div class="cb_button2">
+                            <label>
+                                <input type="checkbox" name="snacks" value="{{snack}}" />
+                                <span>{{snack}}</span>
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                    <p class="lead p-3">
+                        <a class="btn btn-primary btn-lg" href="#main_course" role="button">
+                            NEXT
+                        </a>
+                    </p>
                 </div>
-                <p class="lead p-3">
-                    <a class="btn btn-primary btn-lg" href="#main_course" role="button">
-                        NEXT
-                    </a>
-                </p>
             </div>
             <!-- CardForSnacks-Ends -->
+
+
             <!-- CardForMainCourse -->
-            <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="main_course">
-                <h3 class="display-4 mb-0">Main Course</h3>
-                <div class="d-flex align-content-start flex-wrap">
-                    {% for main_course in main_courses %}
-                    <div class="cb_button2">
-                        <label>
-                            <input type="checkbox" checked name="main_courses" value="{{main_course}}" />
-                            <span>{{main_course}}</span>
-                        </label>
+            <div class="vh-max overflow-auto hide-sb">
+                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded" id="main_course">
+                    <p class="lead">
+                       Please check and <span class="font-weight-bold">SELECT</span> from the remaining entries under each group that will be your <span class="font-weight-bold">'Favourite or Most Preferred'</span> entry while dining outside?
+                    </p>
+                    <span class="card-headings-custom">Main Course</span>
+                    <div class="d-flex align-content-start flex-wrap">
+                        {% for main_course in main_courses %}
+                        <div class="cb_button2">
+                            <label>
+                                <input type="checkbox" name="main_courses" value="{{main_course}}" />
+                                <span>{{main_course}}</span>
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                    <p class="lead p-3">
+                        <a class="btn btn-primary btn-lg" href="#others" role="button">
+                            NEXT
+                        </a>
+                    </p>
                 </div>
-                <p class="lead p-3">
-                    <a class="btn btn-primary btn-lg" href="#others" role="button">
-                        NEXT
-                    </a>
-                </p>
             </div>
             <!-- CardForMainCourse-Ends-->
             <!-- CardForOthers-->
-            <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="others">
-                <h3 class="display-4 mb-0">Others</h3>
-                <div class="d-flex align-content-start flex-wrap">
-                    {% for other in others %}
-                    <div class="cb_button2">
+            <div class="vh-max overflow-auto hide-sb">
+                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded" id="others">
+                    <p class="lead">
+                       Please check and <span class="font-weight-bold">SELECT</span> from the remaining entries under each group that will be your <span class="font-weight-bold">'Favourite or Most Preferred'</span> entry while dining outside?
+                    </p>
+                    <span class="card-headings-custom">Others</span>
+                    <div class="d-flex align-content-start flex-wrap">
+                        {% for other in others %}
+                        <div class="cb_button2">
+                            <label>
+                                <input type="checkbox" name="others" value="{{other}}" />
+                                <span>{{other}}</span>
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="submit_button">
                         <label>
-                            <input type="checkbox" checked name="others" value="{{other}}" />
-                            <span>{{other}}</span>
+                            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
                         </label>
                     </div>
-                    {% endfor %}
+
                 </div>
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
             </div>
             <!-- CardForOthers Ends -->
         </form>
