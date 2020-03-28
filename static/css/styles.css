@@ -30,3 +30,11 @@ body {
 .hide-sb{
     -ms-overflow-style: none;
 }
+
+
+
+.asterisk{
+    color: red;
+    text-align: left;
+    vertical-align: top;
+}

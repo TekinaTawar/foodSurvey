@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets-->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" href="../static/css/button.css" />
+    <!-- StyleSheets end -->
+
+    <title>Food Survey</title>
+</head>
+
+<body>
+    
+ <div class="container">
+    <form action="/" method="POST">
+<!-- CardForOthers-->
+<div class="vh-max overflow-auto hide-sb">
+    <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded" id="others">
+        <p class="lead">
+            Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
+            for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
+            dining outside?
+        </p>
+        <span class="card-headings-custom">Others</span>
+        <div class="d-flex align-content-start flex-wrap">
+            {% for other in others %}
+            <div class="cb_button2">
+                <label>
+                    <input type="checkbox" name="others" value="{{other}}" />
+                    <span>{{other}}</span>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="submit_button">
+            <label>
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+            </label>
+        </div>
+
+    </div>
+</div>
+<!-- CardForOthers Ends -->
+</div>
+
+<!-- https://getbootstrap.com/docs/4.4/components/pagination/ -->
+<!-- Main Container ends here -->
+</form>
+<!-- javaScript dependencies -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<!-- javaScript dependencies end here -->
+
+
+
+
+
+ 
+
+
+
+
+</body>
+</html>
