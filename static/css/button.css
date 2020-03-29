@@ -11,7 +11,7 @@
 
 .cb_button2 > label > span {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   display: block;
   padding: 10px 5px 10px 5px;
@@ -103,8 +103,8 @@
   }
   
   .cb_button2 input:hover + span,
-  .cb_button2 {
-    color: #ff5c97;
+  .cb_button2 , .cb_button2 input:active +span .cb_button2{
+    color: #ff5c97 0.3s;
     border-color: #ff5c97;
   }
 

@@ -49,3 +49,7 @@ body {
 #custom_padding{
     padding: 20px;
 }
+
+.card{
+    border-radius: 25px; 
+}
