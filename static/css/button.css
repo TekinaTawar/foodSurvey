@@ -12,6 +12,7 @@
 .cb_button2 > label > span {
   text-align: center;
   font-size: 13px;
+  font-weight: bold;
   display: block;
   padding: 10px 5px 10px 5px;
   cursor: pointer;
@@ -19,7 +20,7 @@
   border: 2px solid #73b2ff;
   border-radius: 7px;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
   width: fit-content;
   /* float: left; */
 }
