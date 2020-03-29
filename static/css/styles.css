@@ -1,6 +1,9 @@
 body {
-    overflow-y:hidden !important;
     background-color: #E3EDFD !important;
+}
+
+.no-scroll{
+    overflow-y:hidden !important;
 }
 
 .jumbotron{
