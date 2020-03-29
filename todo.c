@@ -2,19 +2,21 @@
 
 // !Tekina
 //todo:  add a progress bar 
-//todo:  in mobile buttons remain pink after tap solve it
 
 // !Huzefa
-//todo:  Add * Required to html page
-//todo:  Add back button.
-//todo:  get all the buttons outside.
-//todo:  add paddng to all the cards.
-//todo: for some reason snacks is comming big chage it back
 
-//? page scroll up in some cases as in age as it is down keyboard.
 
-// * add more padding in the profile form
+
+
 // * Done
+
+// *  in mobile buttons remain pink after tap solve it
+// * page scroll up in some cases as in age as it is down keyboard.
+// * get all the buttons outside.
+// * for some reason snacks is comming big chage it back
+// * Add back button.
+// * Add * Required to html page
+// * add more padding in the profile form
 // * Change font.
 // * Change background color to blue
 // * change first page to start

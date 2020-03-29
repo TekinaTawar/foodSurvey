@@ -23,8 +23,8 @@
     <div class="container">
         <form action="/page1" method="POST">
             <!-- CardForBeverages -->
-            <div class="vh-max overflow-auto hide-sb " id="custom_padding" >
-                <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom " id="beverage">
+            <div class="vh-max overflow-auto hide-sb pt-4" id="beverage" >
+                <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom">
                     <p class="lead">
                         Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
                         for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
@@ -43,7 +43,7 @@
                     </div>
                     
                 </div>
-                <p class="lead p-3">
+                <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#profile">Back</a>
                     </label>
@@ -55,14 +55,14 @@
             <!-- CardForBeverages-Ends -->
 
             <!-- CardForSnacks-->
-            <div class="vh-max overflow-auto hide-sb" id= "custom_padding" >
-                <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded" id="snacks" >
+            <div class="vh-max overflow-auto hide-sb pt-4" id="snacks" >
+                <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
                     <p class="lead">
                         Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
                         for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
                         dining outside?
                     </p>
-                    <h3 class="display-4 mb-0">Snacks</h3>
+                    <h3 class="card-headings-custom">Snacks</h3>
                     <div class="d-flex align-content-start flex-wrap">
                         {% for snack in snacks %}
                         <div class="cb_button2">
@@ -75,7 +75,7 @@
                     </div>
                     
                 </div>
-                <p class="lead p-3">
+                <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#beverage">Back</a>
                     </label>
@@ -89,8 +89,8 @@
 
 
             <!-- CardForMainCourse -->
-            <div class="vh-max overflow-auto hide-sb">
-                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded" id="main_course">
+            <div class="vh-max overflow-auto hide-sb pt-4" id="main_course">
+                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                     <p class="lead">
                         Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
                         for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
@@ -109,7 +109,7 @@
                     </div>
                    
                 </div>
-                <p class="lead p-3">
+                <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#snacks">Back</a>
                     </label>
@@ -121,8 +121,8 @@
             </div>
             <!-- CardForMainCourse-Ends-->
             <!-- CardForOthers-->
-            <div class="vh-max overflow-auto hide-sb" id="custom_padding">
-                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded" id="others">
+            <div class="vh-max overflow-auto hide-sb pt-4" id="others">
+                <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                     <p class="lead">
                         Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
                         for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
@@ -143,7 +143,7 @@
                    
 
                 </div>
-                <p class="lead p-3">
+                <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#main_course">Back</a>
                     </label>
