@@ -14,8 +14,8 @@
 
 //? page scroll up in some cases as in age as it is down keyboard.
 
-// *  change first page to start
 // * Done
+// * change first page to start
 // * email authentication
 
 
