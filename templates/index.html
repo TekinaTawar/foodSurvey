@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/button.css" />
+    <link rel="stylesheet" href="../static/scss/main.css"/>
     <!-- StyleSheets end -->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Google fonts ends here -->
 
     <title>Food Survey</title>
 </head>
@@ -19,8 +25,8 @@
 
         <div class="vh-max">
             <!-- HeroBox -->
-            <div class="jumbotron mt-4 custom">
-                <div class="p-60" id="intro">
+            <div class="jumbotron mt-4 custom px-5">
+                <div class="p-60">
                     <span class="card-headings-custom">Are you a foodie?</span>
                     <p class="lead">
                         Our definition of foodies as a breed refers to people who lie between situations of being fed up
@@ -35,7 +41,7 @@
                     </p>
                     <p class="lead">
                         <a class="btn btn-primary btn-lg" href="#profile" role="button">
-                            NEXT
+                            START
                         </a>
                     </p>
                 </div>
@@ -47,40 +53,40 @@
         <!-- User Form -->
         <div class="form">
             <form action="/" method="POST">
-                <div class="vh-max overflow-auto hide-sb">
+                <div class="vh-max overflow-auto hide-sb pt-4" id="profile">
                     <!-- Profile Card -->
-                    <div class="card mb-4 bg-light shadow-lg mb-5 bg-white rounded custom " id="profile">
-                        <div class="card-body">
+                    <div class="card mb-4 bg-light shadow-lg bg-white rounded custom ">
+                        <div class="card-body p-4">
                             <span class="card-headings-custom">Tell Us A Bit About Yourself</span>
-                            <p class="card-text text-secondary mb-5">To understand the data we have collected we'd need
+                            <p class="card-text text-secondary">To understand the data we have collected we'd need
                                 this
                                 short
                                 help from your side! .</p>
 
                             <div class="form-row">
-                                <div class="col-md-6">
-                                    <label for="first_name"> First Name <span>*</span></label>
+                                <div class="col-md-6 my-3">
+                                    <label for="first_name"> First Name</label>
                                     <input type="text" name="first_name" id="first_name" required
                                         class="form-control" />
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="last_name"> Last Name  <span>*</span></label>
-                                    <input type="text" name="last_name" id="last_name" class="form-control" required>
+                                <div class="col-md-6 my-3">
+                                    <label for="last_name"> Last Name </label>
+                                    <input type="text" name="last_name" id="last_name" class="form-control">
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-12">
-                                    <label for="email">Email <span>*</span></label>
-                                    <input type="text" name="email" id="email" class="form-control" required>
+                                <div class="col-md-12 my-3">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control">
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6 col-sm-6">
-                                    <lable for="age">Age  <span>*</span></lable>
-                                    <input type="number" name="age" id="age" class="form-control" required>
+                                <div class="col-md-6 col-sm-6 my-3">
+                                    <lable for="age">Age</lable>
+                                    <input type="number" name="age" id="age" class="form-control">
                                 </div>
 
-                                <div class="col-md-6 col-sm-6 px-4" id="gender">
+                                <div class="col-md-6 col-sm-6 px-4 my-3" id="gender">
                                     <div class="row">
                                         Gender  <span>*</span>
                                     </div>
@@ -99,13 +105,13 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputCity">City <span>*</span></label>
-                                    <input type="text" class="form-control" id="inputCity" name="city" required>
+                                <div class="form-group col-md-6 my-3">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity" name="city">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputState">State <span>*</span></label>
-                                    <select name="state" id="state" class="form-control" required>
+                                <div class="form-group col-md-6 my-3" >
+                                    <label for="inputState">State</label>
+                                    <select name="state" id="state" class="form-control">
                                         <option selected>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>

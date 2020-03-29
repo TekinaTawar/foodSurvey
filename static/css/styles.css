@@ -1,9 +1,11 @@
 body {
     overflow-y:hidden !important;
-    margin-top: 20px !important;
-    padding: 6px 4px 6px 4px;
+    background-color: #E3EDFD !important;
 }
 
+.jumbotron{
+    background-color: white !important;
+}
 
 .custom{
     padding: 1rem !important ;
@@ -40,3 +42,7 @@ body {
     text-align: left;
     vertical-align: top;
 }
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
