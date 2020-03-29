@@ -1,7 +1,11 @@
 body {
     overflow-y:hidden !important;
+    background-color: #E3EDFD !important;
 }
 
+.jumbotron{
+    background-color: white !important;
+}
 
 .custom{
     padding: 1rem !important ;
@@ -30,3 +34,8 @@ body {
 .hide-sb{
     -ms-overflow-style: none;
 }
+
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+

@@ -6,4 +6,9 @@
     "python.linting.flake8Args": [
         "--ignore=E722,E501"
     ],
+    "lifeSassComplile.settings.formats":[
+        {
+            "savePath": "~/../css/"
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 // !Tekina
 //todo:  Change background color to blue
-//todo:  Change font.
 
 // !Huzefa
 //todo:  Add * Required to html page
@@ -15,6 +14,7 @@
 //? page scroll up in some cases as in age as it is down keyboard.
 
 // * Done
+// * Change font.
 // * change first page to start
 // * email authentication
 
