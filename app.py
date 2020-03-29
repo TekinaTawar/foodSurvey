@@ -2,9 +2,7 @@ from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import date
 
-# this is a random commen#
 
-# life is eazy
 import csvdata
 
 app = Flask(__name__)
@@ -86,6 +84,7 @@ def page1():
 @app.route('/page2', methods=['POST', 'GET'])
 def page2():
     global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
+
     if request.method == 'POST':
         user_beveragesXL = list(set(user_beveragesL) - set(request.form.getlist('beverages')))
         user_snacksXL = list(set(user_snacksL) - set(request.form.getlist('snacks')))
@@ -100,6 +99,10 @@ def page2():
 @app.route('/page3', methods=['POST', 'GET'])
 def page3():
     # global user_beveragesXXL, user_snacksXXL, user_main_coursesXXL, user_othersXXL
+    # global user_name, user_email, user_gender, user_age, user_city, user_state
+    # global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
+    # global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
+
     if request.method == 'POST':
         user_beveragesXXL = request.form.getlist('beverages')
         user_snacksXXL = request.form.getlist('snacks')
