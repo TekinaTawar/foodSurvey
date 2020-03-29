@@ -45,8 +45,13 @@ class Survey(db.Model):
         return '<Task %r>' % self.email
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/form', methods=['POST', 'GET'])
+def form():
     global user_name, user_email, user_gender, user_age, user_city, user_state
 
     if request.method == 'POST':
@@ -63,7 +68,7 @@ def index():
 
         return redirect('/page1')
     else:
-        return render_template('index.html')
+        return render_template('form.html')
 
 
 @app.route('/page1', methods=['POST', 'GET'])

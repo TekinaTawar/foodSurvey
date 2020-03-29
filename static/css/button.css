@@ -11,7 +11,8 @@
 
 .cb_button2 > label > span {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
   display: block;
   padding: 10px 5px 10px 5px;
   cursor: pointer;
@@ -19,7 +20,7 @@
   border: 2px solid #73b2ff;
   border-radius: 7px;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
   width: fit-content;
   /* float: left; */
 }
@@ -38,14 +39,73 @@
   border-color: #2196f3;
 }
 
-.cb_button2 input:checked:hover + span {
+/* .cb_button2 input:checked:hover + span {
   background-color: #ff5c97;
   color: #fff;
   transform: translateY(-7px);
-}
+} */
 
-.cb_button2 input:hover + span,
+/* .cb_button2 input:hover + span,
 .cb_button2 {
   color: #ff5c97;
   border-color: #ff5c97;
+} */
+
+
+
+
+
+
+/* <--web-rendering --> */
+@media only screen and (min-width: 768px){
+
+
+  .cb_button2 {
+    /* overflow: hidden; */
+    margin: 5px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+  .cb_button2 > label > span {
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    padding: 10px 5px 10px 5px;
+    cursor: pointer;
+    color: #73b2ff;
+    border: 2px solid #73b2ff;
+    border-radius: 7px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    /* float: left; */
+  }
+  
+  .cb_button2 input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  
+  .cb_button2 input:checked + span {
+    background-color: #2196f3;
+    color: #fff;
+    padding: 10px 5px 10px 5px;
+    border-color: #2196f3;
+  }
+  
+  .cb_button2 input:checked:hover + span {
+    background-color: #ff5c97;
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .cb_button2 input:hover + span,
+  .cb_button2 , .cb_button2 input:active +span .cb_button2{
+    color: #ff5c97 0.3s;
+    border-color: #ff5c97;
+  }
+
 }

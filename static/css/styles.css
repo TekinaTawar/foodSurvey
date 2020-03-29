@@ -1,7 +1,11 @@
 body {
     overflow-y:hidden !important;
+    background-color: #E3EDFD !important;
 }
 
+.jumbotron{
+    background-color: white !important;
+}
 
 .custom{
     padding: 1rem !important ;
@@ -29,4 +33,23 @@ body {
 /* Hide scrollbar for IE and Edge */
 .hide-sb{
     -ms-overflow-style: none;
+}
+
+
+
+.asterisk{
+    color: red;
+    text-align: left;
+    vertical-align: top;
+}
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#custom_padding{
+    padding: 20px;
+}
+
+.card{
+    border-radius: 25px; 
 }
