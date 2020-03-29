@@ -19,7 +19,7 @@
         <form action="/page2" method="POST">
             <!-- CardForBeverages -->
             <div class="vh-max overflow-auto hide-sb">
-                <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom " id="beverage">
+                <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom " id="beverages">
                     <p class="lead">
                        Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while dining outside?
                     </p>
@@ -34,12 +34,17 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <p class="lead p-3">
-                        <a class="btn btn-primary btn-lg" href="#snacks" role="button">
-                            NEXT
-                        </a>
-                    </p>
+                    
                 </div>
+                <p class="lead p-3">
+                    <label>
+                        <a class="btn btn-primary btn-lg" href="#">Back</a>
+                    </label>
+                   
+                    <a class="btn btn-primary btn-lg" href="#snacks" role="button">
+                        Next
+                    </a>
+                </p>
             </div>
             <!-- CardForBeverages-Ends -->
 
@@ -60,12 +65,17 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <p class="lead p-3">
-                        <a class="btn btn-primary btn-lg" href="#main_course" role="button">
-                            NEXT
-                        </a>
-                    </p>
+                    
                 </div>
+                <p class="lead p-3">
+                    <label>
+                        <a class="btn btn-primary btn-lg" href="#beverages">Back</a>
+                    </label>
+                   
+                    <a class="btn btn-primary btn-lg" href="#main_course" role="button">
+                        Next
+                    </a>
+                </p>
             </div>
             <!-- CardForSnacks-Ends -->
 
@@ -87,12 +97,17 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <p class="lead p-3">
-                        <a class="btn btn-primary btn-lg" href="#others" role="button">
-                            NEXT
-                        </a>
-                    </p>
+                    
                 </div>
+                <p class="lead p-3">
+                    <label>
+                        <a class="btn btn-primary btn-lg" href="#snacks">Back</a>
+                    </label>
+                   
+                    <a class="btn btn-primary btn-lg" href="#others" role="button">
+                        Next
+                    </a>
+                </p>
             </div>
             <!-- CardForMainCourse-Ends-->
             <!-- CardForOthers-->
@@ -113,13 +128,18 @@
                         {% endfor %}
                     </div>
 
-                    <div class="submit_button">
-                        <label>
-                            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
-                        </label>
-                    </div>
+                   
 
                 </div>
+                <p class="lead p-3">
+                    <label>
+                        <a class="btn btn-primary btn-lg" href="#main_course">Back</a>
+                    </label>
+                   
+                    <label>
+                        <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                    </label>
+                </p>
             </div>
             <!-- CardForOthers Ends -->
         </form>

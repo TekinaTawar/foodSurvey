@@ -19,13 +19,13 @@
     <title>Food Survey</title>
 </head>
 
-<body>
+<body >
     <!-- Main Container -->
-    <div class="container">
+    <div class="container" id="intro">
 
-        <div class="vh-max">
+        <div class="vh-max" >
             <!-- HeroBox -->
-            <div class="jumbotron mt-4 custom px-5">
+            <div class="jumbotron mt-4 custom px-5" >
                 <div class="p-60">
                     <span class="card-headings-custom">Are you a foodie?</span>
                     <p class="lead">
@@ -65,53 +65,53 @@
 
                             <div class="form-row">
                                 <div class="col-md-6 my-3">
-                                    <label for="first_name"> First Name</label>
+                                    <label for="first_name"> First Name <span class="asterisk">*</span></label>
                                     <input type="text" name="first_name" id="first_name" required
                                         class="form-control" />
                                 </div>
                                 <div class="col-md-6 my-3">
-                                    <label for="last_name"> Last Name </label>
-                                    <input type="text" name="last_name" id="last_name" class="form-control">
+                                    <label for="last_name"> Last Name <span class="asterisk">*</span></label>
+                                    <input type="text" name="last_name" id="last_name" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-12 my-3">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control">
+                                    <label for="email">Email <span class="asterisk">*</span></label>
+                                    <input type="email" name="email" id="email" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 col-sm-6 my-3">
-                                    <lable for="age">Age</lable>
-                                    <input type="number" name="age" id="age" class="form-control">
+                                    <lable for="age">Age <span class="asterisk">*</span></lable>
+                                    <input type="number" name="age" id="age" class="form-control" required>
                                 </div>
 
                                 <div class="col-md-6 col-sm-6 px-4 my-3" id="gender">
                                     <div class="row">
-                                        Gender  <span>*</span>
+                                        Gender  <span class="asterisk">*</span>
                                     </div>
                                     <div class="row my-2 pl-4">
                                         <div class="form-check form-check-inline col-md-3 col-sm-3">
                                             <input class="form-check-input" type="radio" id="male" value="male"
                                                 name="gender" required>
-                                            <label class="form-check-label" for="male">Male  <span>*</span></label>
+                                            <label class="form-check-label" for="male">Male</label>
                                         </div>
                                         <div class="form-check form-check-inline col-md-3 col-sm-3">
                                             <input class="form-check-input" type="radio" id="female" value="female"
                                                 name="gender" required>
-                                            <label class="form-check-label" for="female">Female  <span>*</span></label>
+                                            <label class="form-check-label" for="female">Female</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6 my-3">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity" name="city">
+                                    <label for="inputCity">City <span class="asterisk">*</span></label>
+                                    <input type="text" class="form-control" id="inputCity" name="city" required>
                                 </div>
                                 <div class="form-group col-md-6 my-3" >
-                                    <label for="inputState">State</label>
-                                    <select name="state" id="state" class="form-control">
+                                    <label for="inputState">State <span class="asterisk">*</span></label>
+                                    <select name="state" id="state" class="form-control" required>
                                         <option selected>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>

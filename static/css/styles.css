@@ -46,3 +46,6 @@ body {
     font-family: 'Montserrat', sans-serif !important;
 }
 
+#custom_padding{
+    padding: 20px;
+}
