@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="static/assets/icon.png" type="image/x-icon"/>
+    <!-- StyleSheets-->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" href="../static/css/button.css" />
+    <!-- StyleSheets end -->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Google fonts ends here -->
+
+    <title>Food Survey</title>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container" id="intro">
+        <div class="form">
+            <form action="/suggestion" method="POST">
+                <div class="vh-max overflow-auto hide-sb pt-4" id="profile">
+                    <!-- Profile Card -->
+                    <div class="card mb-4 bg-light shadow-lg bg-white custom">
+                        <div class="card-body px-2">
+                            <h2>About Us</h2>
+                            <hr class="style2">
+                            <p class="thin">
+                                <span class=font-weight-bold>ScanF</span>, acts as a personal guide for
+                                travellers to discover best food nearby while reducing their efforts in doing so,
+                                eliminating the feel of adjusting by 100% when it comes to food, so that with us they
+                                focus more on travel whenever they travel.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 bg-light shadow-lg bg-white custom">
+                        <div class="card-body p-2">
+                            <h5>Please leave your comments/ suggestions/ ideas for us to improve/ act/ adapt here.</h5>
+                            <hr class="style2">
+                            <p class="thin">
+                                Anything you wish to mention other than the survey, please go ahead. It can be a
+                                question, anything we should improve, etc.
+                            </p>
+                            <textarea class="form-control" rows="3" name="suggestion"></textarea>
+                        </div>
+                    </div>
+                    <!-- Profile card ends here -->
+                    <div class="submit_button">
+                        <label>
+                            <input class="btn btn-primary btn-lg" type="submit" value="submit" />
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- https://getbootstrap.com/docs/4.4/components/pagination/ -->
+    <!-- Main Container ends here -->
+
+    <!-- javaScript dependencies -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- javaScript dependencies end here -->
+</body>
+
+</html>
