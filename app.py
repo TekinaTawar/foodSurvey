@@ -134,7 +134,6 @@ def suggestion():
             db.session.commit()
             print('2')
             return redirect('/success')
-            
         except:
             return "There was some error please try again"
     else:
