@@ -5,19 +5,21 @@
 //todo: button late loading problem (change css to min.css)
 
 // !Tekina
-// todo solve image  loading speed./
-    //? logo
-// todo change thank you page text
-// todo change thank you page text color
-// todo remove it means a lot.
-// todo change title to suvery.
-// todo find a an image for ico.
 
 // !Huzefa
 
+
 // * Done
 
-// *V0.1.0
+// * V0.1.1
+// * find a an image for ico.
+// * change thank you page text color
+// * change title to suvery.
+// * remove it means a lot.
+// * change thank you page text
+// * solve image  loading speed./
+
+// * V0.1.0
 // * add thank you page.
 // *: add another page for suggestion.
 
