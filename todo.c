@@ -2,16 +2,27 @@
 // !time taking task.
 //todo: email authentication in backend (to check weather such email exist or not).
 //todo:  add a progress bar 
+//todo: button late loading problem (change css to min.css)
 
 // !Tekina
-// * add thank you page.
 
 // !Huzefa
 
+
 // * Done
 
+// * V0.1.1
+// * find a an image for ico.
+// * change thank you page text color
+// * change title to suvery.
+// * remove it means a lot.
+// * change thank you page text
+// * solve image  loading speed./
 
+// * V0.1.0
+// * add thank you page.
 // *: add another page for suggestion.
+
 // * V0.0.3+
 // * font size of heading should be larger and everything should be small
 // * question number.
@@ -21,6 +32,7 @@
 // * question sequence wrong
 // * in mobile buttons remain pink after tap solve it
 // * page scroll up in some cases as in age as it is down keyboard.
+
 // * V0.0.3
 // * get all the buttons outside.
 // * for some reason snacks is comming big chage it back
