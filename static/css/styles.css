@@ -56,3 +56,7 @@ body {
 .card{
     border-radius: 25px; 
 }
+
+.ssp, .ssp span{
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
