@@ -60,3 +60,11 @@ body {
 .ssp, .ssp span{
     font-family: 'Source Sans Pro', sans-serif !important;
 }
+
+hr.style2 {
+	border-top: 3px double #E5E5E5;
+}
+
+p.thin {
+    line-height: 1.2em;
+}
