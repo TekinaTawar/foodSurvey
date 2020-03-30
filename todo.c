@@ -11,6 +11,8 @@
 
 // * Done
 
+// * v0.1.2
+// * browser back button disabled on last page.
 // * V0.1.1
 // * find a an image for ico.
 // * change thank you page text color
