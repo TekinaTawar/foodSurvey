@@ -39,6 +39,8 @@ class Survey(db.Model):
     main_coursesXXL = db.Column(db.String(5000), nullable=True)
     othersXXL = db.Column(db.String(5000), nullable=True)
 
+    suggestion = db.Column(db.String(10000), nullable=True)
+
     form_fill_date = db.Column(db.Date, default=date.today)
 
     def __repr__(self):
@@ -103,36 +105,44 @@ def page2():
 
 @app.route('/page3', methods=['POST', 'GET'])
 def page3():
-    # global user_beveragesXXL, user_snacksXXL, user_main_coursesXXL, user_othersXXL
-    # global user_name, user_email, user_gender, user_age, user_city, user_state
-    # global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
-    # global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
+    global user_beveragesXXL, user_snacksXXL, user_main_coursesXXL, user_othersXXL
 
     if request.method == 'POST':
         user_beveragesXXL = request.form.getlist('beverages')
         user_snacksXXL = request.form.getlist('snacks')
         user_main_coursesXXL = request.form.getlist('main_courses')
         user_othersXXL = request.form.getlist('others')
-
-        new_user = Survey(email=user_email, name=user_name, gender=user_gender, age=user_age, state=user_state, city=user_city, beveragesL=str(
-            user_beveragesL), snacksL=str(user_snacksL), main_coursesL=str(user_main_coursesL), othersL=str(user_othersL), beveragesXL=str(
-            user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), beveragesXXL=str(
-            user_beveragesXXL), snacksXXL=str(user_snacksXXL), main_coursesXXL=str(user_main_coursesXXL), othersXXL=str(user_othersXXL),)
-
-        try:
-            db.session.add(new_user)
-            db.session.commit()
-            return redirect('/success')
-        except:
-            return "There was some error please try again"
+        return redirect('/suggestion')
 
     else:
         return render_template('page3.html', beverages=user_beveragesXL, snacks=user_snacksXL, main_courses=user_main_coursesXL, others=user_othersXL)
 
 
+@app.route('/suggestion', methods=['POST', 'GET'])
+def suggestion():
+    if request.method == 'POST':
+        user_suggestion = request.form['suggestion']
+
+        new_user = Survey(email=user_email, name=user_name, gender=user_gender, age=user_age, state=user_state, city=user_city, beveragesL=str(
+            user_beveragesL), snacksL=str(user_snacksL), main_coursesL=str(user_main_coursesL), othersL=str(user_othersL), beveragesXL=str(
+            user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), beveragesXXL=str(
+            user_beveragesXXL), snacksXXL=str(user_snacksXXL), main_coursesXXL=str(user_main_coursesXXL), othersXXL=str(user_othersXXL), suggestion=user_suggestion)
+
+        try:
+            db.session.add(new_user)
+            print('1')
+            db.session.commit()
+            print('2')
+            return redirect('/success')
+        except:
+            return "There was some error please try again"
+    else:
+        return render_template('suggestion.html')
+
+
 @app.route('/success')
 def success():
-    return 'THANKS FOR SUBMITTING DATA'
+    return render_template('thank.html')
 
 
 if __name__ == "__main__":

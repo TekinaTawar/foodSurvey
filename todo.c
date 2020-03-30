@@ -4,11 +4,14 @@
 //todo:  add a progress bar 
 
 // !Tekina
+// * add thank you page.
 
 // !Huzefa
 
 // * Done
 
+
+// *: add another page for suggestion.
 // * V0.0.3+
 // * font size of heading should be larger and everything should be small
 // * question number.
