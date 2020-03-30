@@ -13,13 +13,13 @@
 
 // * Done
 // * V0.1.3
-//todo: last page shadow
-//todo: tell us a bit about yourself to you.
-//todo: about us jo likha hai uska font size and please leave your... ka font size same hoga to about us ka ek do point badha dena
-//todo: remove thank you image.
-//todo: thankyou text align center.
-//todo: only beverage in first page small
-//todo: next button first page outside.
+// * last page shadow
+// * tell us a bit about yourself to you.
+// * about us jo likha hai uska font size and please leave your... ka size same hoga to about us ka ek do point badha dena
+// * remove thank you image.
+// * thankyou text align center.
+// * only beverage in first page small
+// * next button first page outside.
 // * V0.1.2
 // * browser back button disabled on last page.
 // * V0.1.1
