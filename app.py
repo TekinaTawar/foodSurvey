@@ -130,8 +130,11 @@ def suggestion():
 
         try:
             db.session.add(new_user)
+            print('1')
             db.session.commit()
+            print('2')
             return redirect('/success')
+            
         except:
             return "There was some error please try again"
     else:
@@ -140,7 +143,7 @@ def suggestion():
 
 @app.route('/success')
 def success():
-    return 'THANKS FOR SUBMITTING DATA'
+    return render_template('thank.html')
 
 
 if __name__ == "__main__":
