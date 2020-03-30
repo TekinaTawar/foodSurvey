@@ -1,6 +1,9 @@
 body {
-    overflow-y:hidden !important;
     background-color: #E3EDFD !important;
+}
+
+.no-scroll{
+    overflow-y:hidden !important;
 }
 
 .jumbotron{
@@ -52,4 +55,8 @@ body {
 
 .card{
     border-radius: 25px; 
+}
+
+.ssp, .ssp span{
+    font-family: 'Source Sans Pro', sans-serif !important;
 }

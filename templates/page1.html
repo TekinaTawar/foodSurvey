@@ -12,26 +12,29 @@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- Google fonts ends here -->
 
     <title>Food Survey</title>
 </head>
 
-<body>
+<body class="no-scroll">
     <!-- Main Container -->
     <div class="container">
         <form action="/page1" method="POST">
             <!-- CardForBeverages -->
-            <div class="vh-max overflow-auto hide-sb pt-4" id="beverage" >
+            <div class="vh-max overflow-auto hide-sb pt-4" id="beverage">
                 <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom">
-                    <p class="lead">
-                        Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
-                        for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
-                        dining outside?
-                    </p>
-                    <span class="card-headings-custom">Beverages</span>
-                    <div class="d-flex align-content-start flex-wrap">
+                    <div class="mb-2">
+                        <p class="h3 ssp">
+                            <span class="font-weight-bold">Q1.</span> Please <span
+                                class="font-weight-bold">SELECT</span> from the options given below under each group for
+                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
+                            outside?
+                        </p>
+                    </div>
+                    <span class="h4">Beverages</span>
+                    <div class="d-flex align-content-start flex-wrap mt-2">
                         {% for beverage in beverages %}
                         <div class="cb_button2">
                             <label>
@@ -41,11 +44,11 @@
                         </div>
                         {% endfor %}
                     </div>
-                    
+
                 </div>
                 <p class="lead">
                     <label>
-                        <a class="btn btn-primary btn-lg" href="#profile">Back</a>
+                        <a class="btn btn-primary btn-lg" href="/form">Back</a>
                     </label>
                     <a class="btn btn-primary btn-lg" href="#snacks" role="button">
                         Next
@@ -55,15 +58,18 @@
             <!-- CardForBeverages-Ends -->
 
             <!-- CardForSnacks-->
-            <div class="vh-max overflow-auto hide-sb pt-4" id="snacks" >
+            <div class="vh-max overflow-auto hide-sb pt-4" id="snacks">
                 <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
-                    <p class="lead">
-                        Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
-                        for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
-                        dining outside?
-                    </p>
+                     <div class="mb-2">
+                        <p class="h3 ssp">
+                            <span class="font-weight-bold">Q1.</span> Please <span
+                                class="font-weight-bold">SELECT</span> from the options given below under each group for
+                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
+                            outside?
+                        </p>
+                    </div>
                     <h3 class="card-headings-custom">Snacks</h3>
-                    <div class="d-flex align-content-start flex-wrap">
+                    <div class="d-flex align-content-start flex-wrap mt-2">
                         {% for snack in snacks %}
                         <div class="cb_button2">
                             <label>
@@ -73,13 +79,13 @@
                         </div>
                         {% endfor %}
                     </div>
-                    
+
                 </div>
                 <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#beverage">Back</a>
                     </label>
-                   
+
                     <a class="btn btn-primary btn-lg" href="#main_course" role="button">
                         Next
                     </a>
@@ -91,13 +97,16 @@
             <!-- CardForMainCourse -->
             <div class="vh-max overflow-auto hide-sb pt-4" id="main_course">
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
-                    <p class="lead">
-                        Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
-                        for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
-                        dining outside?
-                    </p>
+                     <div class="mb-2">
+                        <p class="h3 ssp">
+                            <span class="font-weight-bold">Q1.</span> Please <span
+                                class="font-weight-bold">SELECT</span> from the options given below under each group for
+                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
+                            outside?
+                        </p>
+                    </div>
                     <span class="card-headings-custom">Main Course</span>
-                    <div class="d-flex align-content-start flex-wrap">
+                    <div class="d-flex align-content-start flex-wrap mt-2">
                         {% for main_course in main_courses %}
                         <div class="cb_button2">
                             <label>
@@ -107,13 +116,13 @@
                         </div>
                         {% endfor %}
                     </div>
-                   
+
                 </div>
                 <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#snacks">Back</a>
                     </label>
-                   
+
                     <a class="btn btn-primary btn-lg" href="#others" role="button">
                         Next
                     </a>
@@ -123,13 +132,16 @@
             <!-- CardForOthers-->
             <div class="vh-max overflow-auto hide-sb pt-4" id="others">
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
-                    <p class="lead">
-                        Please <span class="font-weight-bold">SELECT</span> from the remaining entries under each group
-                        for the entries that you <span class="font-weight-bold">'Dislike or Prefer Less'</span> while
-                        dining outside?
-                    </p>
+                     <div class="mb-2">
+                        <p class="h3 ssp">
+                            <span class="font-weight-bold">Q1.</span> Please <span
+                                class="font-weight-bold">SELECT</span> from the options given below under each group for
+                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
+                            outside?
+                        </p>
+                    </div>
                     <span class="card-headings-custom">Others</span>
-                    <div class="d-flex align-content-start flex-wrap">
+                    <div class="d-flex align-content-start flex-wrap mt-2">
                         {% for other in others %}
                         <div class="cb_button2">
                             <label>
@@ -140,16 +152,16 @@
                         {% endfor %}
                     </div>
 
-                   
+
 
                 </div>
                 <p class="lead">
                     <label>
                         <a class="btn btn-primary btn-lg" href="#main_course">Back</a>
                     </label>
-                   
+
                     <label>
-                        <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                        <input class="btn btn-primary btn-lg" type="submit" value="Next Question" />
                     </label>
                 </p>
             </div>
