@@ -4,7 +4,7 @@
 //todo:  add a progress bar 
 
 // !Tekina
-
+//todo: add another page for suggestion.
 // !Huzefa
 
 // * Done
