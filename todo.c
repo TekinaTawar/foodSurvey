@@ -3,15 +3,24 @@
 //todo: email authentication in backend (to check weather such email exist or not).
 //todo:  add a progress bar 
 //todo: button late loading problem (change css to min.css)
+//todo: In case of back of pages the data is lost.
 
 // !Tekina
+
 
 // !Huzefa
 
 
 // * Done
-
-// * v0.1.2
+// * V0.1.3
+// * last page shadow
+// * tell us a bit about yourself to you.
+// * about us jo likha hai uska font size and please leave your... ka size same hoga to about us ka ek do point badha dena
+// * remove thank you image.
+// * thankyou text align center.
+// * only beverage in first page small
+// * next button first page outside.
+// * V0.1.2
 // * browser back button disabled on last page.
 // * V0.1.1
 // * find a an image for ico.
@@ -29,7 +38,6 @@
 // * font size of heading should be larger and everything should be small
 // * question number.
 // * back not working 
-    //? In case of back of pages the data is lost.
 // * change submit to next
 // * question sequence wrong
 // * in mobile buttons remain pink after tap solve it
