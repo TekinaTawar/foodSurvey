@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
-from datetime import date
-
+from datetime import datetime
 
 import csvdata
 
@@ -16,7 +15,6 @@ class Survey(db.Model):
     # from app import db
     # db.create_all()
 
-    # id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(200), nullable=False, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     gender = db.Column(db.String(20), nullable=False)
@@ -41,7 +39,8 @@ class Survey(db.Model):
 
     suggestion = db.Column(db.String(10000), nullable=True)
 
-    form_fill_date = db.Column(db.Date, default=date.today)
+    time_taken = db.Column(db.Integer, nullable=False)
+    time_stamp = db.Column(db.DateTime, default=datetime.utcnow(), nullable=False)
 
     def __repr__(self):
         return '<Task %r>' % self.email
@@ -49,6 +48,8 @@ class Survey(db.Model):
 
 @app.route('/')
 def index():
+    global start_time
+    start_time = datetime.utcnow()
     return render_template('index.html')
 
 
@@ -122,20 +123,19 @@ def page3():
 def suggestion():
     if request.method == 'POST':
         user_suggestion = request.form['suggestion']
+        end_time = datetime.utcnow()
+
+        time_taken = int((end_time - start_time).seconds)
 
         new_user = Survey(email=user_email, name=user_name, gender=user_gender, age=user_age, state=user_state, city=user_city, beveragesL=str(
             user_beveragesL), snacksL=str(user_snacksL), main_coursesL=str(user_main_coursesL), othersL=str(user_othersL), beveragesXL=str(
             user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), beveragesXXL=str(
-            user_beveragesXXL), snacksXXL=str(user_snacksXXL), main_coursesXXL=str(user_main_coursesXXL), othersXXL=str(user_othersXXL), suggestion=user_suggestion)
+            user_beveragesXXL), snacksXXL=str(user_snacksXXL), main_coursesXXL=str(user_main_coursesXXL), othersXXL=str(user_othersXXL), suggestion=user_suggestion, time_taken=time_taken)
 
-        try:
-            db.session.add(new_user)
-            print('1')
-            db.session.commit()
-            print('2')
-            return redirect('/success')
-        except:
-            return "There was some error please try again"
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect('/success')
+
     else:
         return render_template('suggestion.html')
 
