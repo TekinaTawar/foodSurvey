@@ -2,7 +2,7 @@ import json
 
 
 def getdishes(ftype='', food_pref='NON-VEG'):
-    with open('data.json', 'r') as file:
+    with open('.//static//assets//data.json', 'r') as file:
         rows = json.load(file)
 
     ls = []
