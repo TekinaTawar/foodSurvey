@@ -28,10 +28,7 @@
                 <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom">
                     <div class="mb-2">
                         <p class="h3 ssp">
-                            <span class="font-weight-bold">Q1.</span> Please <span
-                                class="font-weight-bold">SELECT</span> from the options given below under each group for
-                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
-                            outside?
+                            <span class="font-weight-bold">Q1.</span> Please <span class="font-weight-bold">DESELECT</span> from the options selected below, for the entries that you have <span class="font-weight-bold">NEVER TRIED</span> before?
                         </p>
                     </div>
                     <span class="h4">Beverages</span>
@@ -39,7 +36,7 @@
                         {% for beverage in beverages %}
                         <div class="cb_button2">
                             <label>
-                                <input type="checkbox" name="beverages" value="{{beverage}}" />
+                                <input type="checkbox" name="beverages" value="{{beverage}}" checked/>
                                 <span>{{beverage}}</span>
                             </label>
                         </div>
@@ -63,10 +60,7 @@
                 <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
-                            <span class="font-weight-bold">Q1.</span> Please <span
-                                class="font-weight-bold">SELECT</span> from the options given below under each group for
-                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
-                            outside?
+                            <span class="font-weight-bold">Q1.</span> Please <span class="font-weight-bold">DESELECT</span> from the options selected below, for the entries that you have <span class="font-weight-bold">NEVER TRIED</span> before?
                         </p>
                     </div>
                     <h3 class="h4">Snacks</h3>
@@ -74,7 +68,7 @@
                         {% for snack in snacks %}
                         <div class="cb_button2">
                             <label>
-                                <input type="checkbox" name="snacks" value="{{snack}}" />
+                                <input type="checkbox" name="snacks" value="{{snack}}" checked/>
                                 <span>{{snack}}</span>
                             </label>
                         </div>
@@ -100,10 +94,7 @@
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
-                            <span class="font-weight-bold">Q1.</span> Please <span
-                                class="font-weight-bold">SELECT</span> from the options given below under each group for
-                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
-                            outside?
+                            <span class="font-weight-bold">Q1.</span> Please <span class="font-weight-bold">DESELECT</span> from the options selected below, for the entries that you have <span class="font-weight-bold">NEVER TRIED</span> before?
                         </p>
                     </div>
                     <span class="h4">Main Course</span>
@@ -111,7 +102,7 @@
                         {% for main_course in main_courses %}
                         <div class="cb_button2">
                             <label>
-                                <input type="checkbox" name="main_courses" value="{{main_course}}" />
+                                <input type="checkbox" name="main_courses" value="{{main_course}}" checked/>
                                 <span>{{main_course}}</span>
                             </label>
                         </div>
@@ -135,10 +126,7 @@
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
-                            <span class="font-weight-bold">Q1.</span> Please <span
-                                class="font-weight-bold">SELECT</span> from the options given below under each group for
-                            the entries that you <span class="font-weight-bold">Avoid or Never Eat</span> while dining
-                            outside?
+                            <span class="font-weight-bold">Q1.</span> Please <span class="font-weight-bold">DESELECT</span> from the options selected below, for the entries that you have <span class="font-weight-bold">NEVER TRIED</span> before?
                         </p>
                     </div>
                     <span class="h4">Others</span>
@@ -146,7 +134,7 @@
                         {% for other in others %}
                         <div class="cb_button2">
                             <label>
-                                <input type="checkbox" name="others" value="{{other}}" />
+                                <input type="checkbox" name="others" value="{{other}}" checked/>
                                 <span>{{other}}</span>
                             </label>
                         </div>

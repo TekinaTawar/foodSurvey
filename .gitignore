@@ -5,3 +5,5 @@ env
 read.md
 __pycache__
 templates/navbar.html
+deprecated
+deprecated/*

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="static/assets/icon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="static/assets/icon.ico" type="image/x-icon" />
     <!-- StyleSheets-->
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
@@ -43,36 +43,58 @@
                                     <input type="text" name="last_name" id="last_name" class="form-control" required>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-md-12 my-3">
                                     <label for="email">Email <span class="asterisk">*</span></label>
                                     <input type="email" name="email" id="email" class="form-control" required>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-md-6 col-sm-6 my-3">
                                     <lable for="age">Age <span class="asterisk">*</span></lable>
                                     <input type="number" name="age" id="age" class="form-control" required>
                                 </div>
-
-                                <div class="col-md-6 col-sm-6 px-4 my-3" id="gender">
-                                    <div class="row">
-                                        Gender <span class="asterisk">*</span>
-                                    </div>
-                                    <div class="row my-2 pl-4">
-                                        <div class="form-check form-check-inline col-md-3 col-sm-3">
-                                            <input class="form-check-input" type="radio" id="male" value="male"
-                                                name="gender" required>
-                                            <label class="form-check-label" for="male">Male</label>
+                                <div class="col-md-6 col-sm-6 my-3">
+                                    <lable for=gender class="mb-2">Gender<span class="asterisk"> *</span></lable>
+                                    <div id="gender" class="custom-control mt-2 pl-2">
+                                        <div class="custom-control custom-radio custom-control-inline col-3">
+                                            <input type="radio" id="Male" value="Male" name="gender"
+                                                class="custom-control-input" required>
+                                            <label class="custom-control-label" for="Male">Male</label>
                                         </div>
-                                        <div class="form-check form-check-inline col-md-3 col-sm-3">
-                                            <input class="form-check-input" type="radio" id="female" value="female"
-                                                name="gender" required>
-                                            <label class="form-check-label" for="female">Female</label>
+                                        <div class="custom-control custom-radio custom-control-inline col-3">
+                                            <input type="radio" id="Female" value="Female" name="gender"
+                                                class="custom-control-input" required>
+                                            <label class="custom-control-label" for="Female">Female</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-row my-3">
+                                <lable for=dietary_restriction class="col-12">I'm a<span class="asterisk"> *</span></lable>              
+                                <div id="dietary_restriction" class="custom-control mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline ">
+                                        <input type="radio" id="VEG" value="VEG" name="dietary_restriction"
+                                            class="custom-control-input" required>
+                                        <label class="custom-control-label" for="VEG">Vegetarian</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline ">
+                                        <input type="radio" id="EGG" value="EGG" name="dietary_restriction"
+                                            class="custom-control-input" required>
+                                        <label class="custom-control-label" for="EGG">Eggetarian</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline ">
+                                        <input type="radio" id="NON-VEG" value="NON-VEG" name="dietary_restriction"
+                                            class="custom-control-input" required>
+                                        <label class="custom-control-label" for="NON-VEG">Non-Vegetarian</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="form-row">
                                 <div class="form-group col-md-6 my-3">
                                     <label for="inputCity">City <span class="asterisk">*</span></label>
@@ -147,4 +169,5 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <!-- javaScript dependencies end here -->
 </body>
+
 </html>

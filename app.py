@@ -3,12 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 import csvdata
+from jsondata import getdishes as gd
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
-
-glob_mail = ''
 
 
 class Survey(db.Model):
@@ -20,22 +19,23 @@ class Survey(db.Model):
     gender = db.Column(db.String(20), nullable=False)
     age = db.Column(db.Integer, nullable=False)
     state = db.Column(db.String(100), nullable=False)
-    city = db.Column(db.String(100), nullable=False)
+    city = db.Column(db.String(50), nullable=False)
+    food_pref = db.Column(db.String(20), nullable=False)
 
-    beveragesL = db.Column(db.String(5000), nullable=True)
-    snacksL = db.Column(db.String(5000), nullable=True)
-    main_coursesL = db.Column(db.String(5000), nullable=True)
-    othersL = db.Column(db.String(5000), nullable=True)
+    beveragesNK = db.Column(db.String(5000), nullable=True)
+    snacksNK = db.Column(db.String(5000), nullable=True)
+    main_coursesNK = db.Column(db.String(5000), nullable=True)
+    othersNK = db.Column(db.String(5000), nullable=True)
+
+    beveragesNL = db.Column(db.String(5000), nullable=True)
+    snacksNL = db.Column(db.String(5000), nullable=True)
+    main_coursesNL = db.Column(db.String(5000), nullable=True)
+    othersNL = db.Column(db.String(5000), nullable=True)
 
     beveragesXL = db.Column(db.String(5000), nullable=True)
     snacksXL = db.Column(db.String(5000), nullable=True)
     main_coursesXL = db.Column(db.String(5000), nullable=True)
     othersXL = db.Column(db.String(5000), nullable=True)
-
-    beveragesXXL = db.Column(db.String(5000), nullable=True)
-    snacksXXL = db.Column(db.String(5000), nullable=True)
-    main_coursesXXL = db.Column(db.String(5000), nullable=True)
-    othersXXL = db.Column(db.String(5000), nullable=True)
 
     suggestion = db.Column(db.String(10000), nullable=True)
 
@@ -55,7 +55,7 @@ def index():
 
 @app.route('/form', methods=['POST', 'GET'])
 def form():
-    global user_name, user_email, user_gender, user_age, user_city, user_state
+    global user_name, user_email, user_gender, user_age, user_city, user_state, user_food_pref
 
     if request.method == 'POST':
         first_name = request.form['first_name']
@@ -68,6 +68,7 @@ def form():
         user_age = request.form['age']
         user_city = request.form['city']
         user_state = request.form['state']
+        user_food_pref = request.form['dietary_restriction']
 
         return redirect('/page1')
     else:
@@ -76,47 +77,60 @@ def form():
 
 @app.route('/page1', methods=['POST', 'GET'])
 def page1():
-    global user_beveragesL, user_snacksL, user_main_coursesL, user_othersL
+    global user_beveragesNK, user_snacksNK, user_main_coursesNK, user_othersNK
+    global user_beveragesK, user_snacksK, user_main_coursesK, user_othersK
+
+    user_beveragesK = request.form.getlist('beverages')
+    user_snacksK = request.form.getlist('snacks')
+    user_main_coursesK = request.form.getlist('main_courses')
+    user_othersK = request.form.getlist('others')
 
     if request.method == 'POST':
-        user_beveragesL = list(set(csvdata.Beverages) - set(request.form.getlist('beverages')))
-        user_snacksL = list(set(csvdata.Snacks) - set(request.form.getlist('snacks')))
-        user_main_coursesL = list(set(csvdata.MainCourses) - set(request.form.getlist('main_courses')))
-        user_othersL = list(set(csvdata.Others) - set(request.form.getlist('others')))
+        user_beveragesNK = list(set(csvdata.Beverages) - set(user_beveragesK))
+        user_snacksNK = list(set(csvdata.Snacks) - set(user_snacksK))
+        user_main_coursesNK = list(set(csvdata.MainCourses) - set(user_main_coursesK))
+        user_othersNK = list(set(csvdata.Others) - set(user_othersK))
 
         return redirect('/page2')
     else:
-        return render_template('page1.html', beverages=csvdata.Beverages, snacks=csvdata.Snacks, main_courses=csvdata.MainCourses, others=csvdata.Others)
+        return render_template('page1.html', beverages=gd("BEVERAGE", user_food_pref),
+                               snacks=gd("SNACK", user_food_pref),
+                               main_courses=gd("MAIN_COURSE", user_food_pref),
+                               others=gd("OTHER", user_food_pref))
 
 
 @app.route('/page2', methods=['POST', 'GET'])
 def page2():
-    global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
+    global user_beveragesNL, user_snacksNL, user_main_coursesNL, user_othersNL
 
     if request.method == 'POST':
-        user_beveragesXL = list(set(user_beveragesL) - set(request.form.getlist('beverages')))
-        user_snacksXL = list(set(user_snacksL) - set(request.form.getlist('snacks')))
-        user_main_coursesXL = list(set(user_main_coursesL) - set(request.form.getlist('main_courses')))
-        user_othersXL = list(set(user_othersL) - set(request.form.getlist('others')))
+        user_beveragesNL = request.form.getlist('beverages')
+        user_snacksNL = request.form.getlist('snacks')
+        user_main_coursesNL = request.form.getlist('main_courses')
+        user_othersNL = request.form.getlist('others')
 
         return redirect('/page3')
     else:
-        return render_template('page2.html', beverages=user_beveragesL, snacks=user_snacksL, main_courses=user_main_coursesL, others=user_othersL)
+        return render_template('page2.html', beverages=user_beveragesK, snacks=user_snacksK, main_courses=user_main_coursesK, others=user_othersK)
 
 
 @app.route('/page3', methods=['POST', 'GET'])
 def page3():
-    global user_beveragesXXL, user_snacksXXL, user_main_coursesXXL, user_othersXXL
+    global user_beveragesXL, user_snacksXL, user_main_coursesXL, user_othersXL
 
     if request.method == 'POST':
-        user_beveragesXXL = request.form.getlist('beverages')
-        user_snacksXXL = request.form.getlist('snacks')
-        user_main_coursesXXL = request.form.getlist('main_courses')
-        user_othersXXL = request.form.getlist('others')
+        user_beveragesXL = request.form.getlist('beverages')
+        user_snacksXL = request.form.getlist('snacks')
+        user_main_coursesXL = request.form.getlist('main_courses')
+        user_othersXL = request.form.getlist('others')
         return redirect('/suggestion')
 
     else:
-        return render_template('page3.html', beverages=user_beveragesXL, snacks=user_snacksXL, main_courses=user_main_coursesXL, others=user_othersXL)
+        user_beveragesM = list(set(user_beveragesK) - set(user_beveragesNL))
+        user_snacksM = list(set(user_snacksK) - set(user_snacksNL))
+        user_main_coursesM = list(set(user_main_coursesK) - set(user_main_coursesNL))
+        user_othersM = list(set(user_othersK) - set(user_othersNL))
+        return render_template('page3.html', beverages=user_beveragesM, snacks=user_snacksM, main_courses=user_main_coursesM, others=user_othersM)
 
 
 @app.route('/suggestion', methods=['POST', 'GET'])
@@ -127,10 +141,10 @@ def suggestion():
 
         time_taken = int((end_time - start_time).seconds)
 
-        new_user = Survey(email=user_email, name=user_name, gender=user_gender, age=user_age, state=user_state, city=user_city, beveragesL=str(
-            user_beveragesL), snacksL=str(user_snacksL), main_coursesL=str(user_main_coursesL), othersL=str(user_othersL), beveragesXL=str(
-            user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), beveragesXXL=str(
-            user_beveragesXXL), snacksXXL=str(user_snacksXXL), main_coursesXXL=str(user_main_coursesXXL), othersXXL=str(user_othersXXL), suggestion=user_suggestion, time_taken=time_taken)
+        new_user = Survey(email=user_email, name=user_name, gender=user_gender, age=user_age, state=user_state, city=user_city, food_pref=user_food_pref, beveragesNK=str(
+            user_beveragesNK), snacksNK=str(user_snacksNK), main_coursesNK=str(user_main_coursesNK), othersNK=str(user_othersNK), beveragesNL=str(
+            user_beveragesNL), snacksNL=str(user_snacksNL), main_coursesNL=str(user_main_coursesNL), othersNL=str(user_othersNL), beveragesXL=str(
+            user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), suggestion=user_suggestion, time_taken=time_taken)
 
         db.session.add(new_user)
         db.session.commit()
