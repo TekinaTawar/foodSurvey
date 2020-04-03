@@ -150,13 +150,7 @@ def suggestion():
             db.session.commit()
             return redirect('/success')
         except:
-            message = 'sorry for your inconvenience [We are still in beta and trying to solve these issues in better ways] \n'
-            message += 'Your data was not submitted because of one of the following reasons- \n'
-            message += '1. You have already submitted the data with this same email before. \n'
-            message += '2. Our Server was overloaded because of two many request.\n'
-            message += '3. The data filter could not understand some part of data that you sent.\n\n\n'
-            message += '4. We will appreciate if you tell about this error to the source you got this survey form.'
-            return message
+            return render_template('error.html')
 
     else:
         return render_template('suggestion.html')
