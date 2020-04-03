@@ -145,9 +145,18 @@ def suggestion():
             user_beveragesNL), snacksNL=str(user_snacksNL), main_coursesNL=str(user_main_coursesNL), othersNL=str(user_othersNL), beveragesXL=str(
             user_beveragesXL), snacksXL=str(user_snacksXL), main_coursesXL=str(user_main_coursesXL), othersXL=str(user_othersXL), suggestion=user_suggestion, time_taken=time_taken)
 
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect('/success')
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect('/success')
+        except:
+            message = 'sorry for your inconvenience [We are still in beta and trying to solve these issues in better ways] \n'
+            message += 'Your data was not submitted because of one of the following reasons- \n'
+            message += '1. You have already submitted the data with this same email before. \n'
+            message += '2. Our Server was overloaded because of two many request.\n'
+            message += '3. The data filter could not understand some part of data that you sent.\n\n\n'
+            message += '4. We will appreciate if you tell about this error to the source you got this survey form.'
+            return message
 
     else:
         return render_template('suggestion.html')
