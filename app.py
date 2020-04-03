@@ -2,7 +2,6 @@ from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-import csvdata
 from jsondata import getdishes as gd
 
 app = Flask(__name__)
@@ -86,10 +85,10 @@ def page1():
     user_othersK = request.form.getlist('others')
 
     if request.method == 'POST':
-        user_beveragesNK = list(set(csvdata.Beverages) - set(user_beveragesK))
-        user_snacksNK = list(set(csvdata.Snacks) - set(user_snacksK))
-        user_main_coursesNK = list(set(csvdata.MainCourses) - set(user_main_coursesK))
-        user_othersNK = list(set(csvdata.Others) - set(user_othersK))
+        user_beveragesNK = list(set(gd("BEVERAGE", user_food_pref)) - set(user_beveragesK))
+        user_snacksNK = list(set(gd("SNACK", user_food_pref)) - set(user_snacksK))
+        user_main_coursesNK = list(set(gd("MAIN_COURSE", user_food_pref)) - set(user_main_coursesK))
+        user_othersNK = list(set(gd("OTHER", user_food_pref)) - set(user_othersK))
 
         return redirect('/page2')
     else:
