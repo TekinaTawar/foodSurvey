@@ -4,8 +4,21 @@ from datetime import datetime
 
 from jsondata import getdishes as gd
 
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+
+ENV = 'prod'
+
+
+if ENV == 'dev':
+    app.debug = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:toor@localhost/test'
+else:
+    app.debug = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:foodforu@survey.cugkgprl9fae.us-east-1.rds.amazonaws.com'
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy(app)
 
 
