@@ -15,7 +15,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:toor@localhost/test'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:foodforu@survey.cugkgprl9fae.us-east-1.rds.amazonaws.com'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:foodforu@survey.cugkgprl9fae.us-east-1.rds.amazonaws.com:5432/survey'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
