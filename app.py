@@ -57,7 +57,7 @@ class UserData(db.Model):
     suggestion = db.Column(db.String(10000), nullable=True)
 
     time_taken = db.Column(db.Integer, nullable=False)
-    time_stamp = db.Column(db.DateTime, default=datetime.utcnow(), nullable=False)
+    time_stamp = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
     def __repr__(self):
         return f'{self.__class__.__name__}({self.id}, {self.email}, {self.name})'
