@@ -5,10 +5,11 @@ from datetime import datetime
 
 from jsondata import getdishes as gd
 
+
 app = Flask(__name__)
 
 # change this to dev if you are using these files locally.
-ENV = 'dev'
+ENV = 'prod'
 app.config['SECRET_KEY'] = '04a3a646d40f8fc28899016312007807'
 
 if ENV == 'dev':
@@ -191,3 +192,5 @@ def success():
 
 if __name__ == "__main__":
     app.run(debug=True)
+# random commment.
+# life is crazy.
