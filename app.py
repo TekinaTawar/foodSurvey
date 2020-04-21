@@ -29,7 +29,7 @@ class UserData(db.Model):
     # from app import db
     # db.create_all()
     # db.drop_all()
-    __tablename__ = 'UserData'
+    __tablename__ = 'user_data'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(200), nullable=False, unique=True)
     name = db.Column(db.String(100), nullable=False)
