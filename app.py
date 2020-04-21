@@ -17,7 +17,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:toor@localhost/foodSurvey'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nsgjgeuumvtroc:e0e54297eb177b12572ffee3bbaa8941f954e1afcb80b65b9045b6e224ff9740@ec2-34-197-212-240.compute-1.amazonaws.com:5432/d639k1hqb4t0ur'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gfwqeznjqizuki:745f9be7c8779add122a2ffc9bde86565fbf809359f3fb33f382843b02403a83@ec2-18-235-20-228.compute-1.amazonaws.com:5432/d541dctpgsmsse'
 
 # This line remove the warning of overhead during creating database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
