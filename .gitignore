@@ -7,3 +7,4 @@ __pycache__
 templates/navbar.html
 deprecated
 deprecated/*
+.vscode
