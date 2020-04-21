@@ -25,6 +25,13 @@
         <div class="form">
             <form action="/form" method="POST">
                 <div class="vh-max overflow-auto hide-sb pt-4" id="profile">
+                    <!-- alert -->
+                    {% if message %}
+                    <div class="alert alert-success" role="alert">
+                        {{message}}
+                      </div>
+                    {% endif %}
+                    <!-- alertends -->
                     <!-- Profile Card -->
                     <div class="card mb-4 bg-light shadow-lg bg-white rounded custom ">
                         <div class="card-body p-4">

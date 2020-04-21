@@ -71,15 +71,17 @@ def index():
 @app.route('/form', methods=['POST', 'GET'])
 def form():
     if request.method == 'POST':
-        session['user_name'] = request.form['first_name'] + " " + request.form['last_name']
-        session['user_email'] = request.form['email']
-        session['user_gender'] = request.form['gender']
-        session['user_age'] = request.form['age']
-        session['user_city'] = request.form['city']
-        session['user_state'] = request.form['state']
-        session['user_food_pref'] = request.form['dietary_restriction']
-
-        return redirect('/page1')
+        if db.session.query(UserData).filter(UserData.email == request.form['email']).count() == 0:
+            session['user_email'] = request.form['email']
+            session['user_name'] = request.form['first_name'] + " " + request.form['last_name']
+            session['user_gender'] = request.form['gender']
+            session['user_age'] = request.form['age']
+            session['user_city'] = request.form['city']
+            session['user_state'] = request.form['state']
+            session['user_food_pref'] = request.form['dietary_restriction']
+            return redirect('/page1')
+        else:
+            return render_template('form.html', message='Survey have been already filled with this email.')
     else:
         return render_template('form.html')
 
