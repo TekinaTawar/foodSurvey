@@ -17,7 +17,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:toor@localhost/foodSurvey'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://olnrjiquzzgemy:e8b327116dc9eba68172b6402b9aa9d29f1b8ebd51f5a4420232ebe230b87ca6@ec2-52-87-58-157.compute-1.amazonaws.com:5432/d65n9thrq0jcu0'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gfwqeznjqizuki:745f9be7c8779add122a2ffc9bde86565fbf809359f3fb33f382843b02403a83@ec2-18-235-20-228.compute-1.amazonaws.com:5432/d541dctpgsmsse'
 
 # This line remove the warning of overhead during creating database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -29,7 +29,7 @@ class UserData(db.Model):
     # from app import db
     # db.create_all()
     # db.drop_all()
-    __tablename__ = 'UserData'
+    __tablename__ = 'user_data'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(200), nullable=False, unique=True)
     name = db.Column(db.String(100), nullable=False)
@@ -57,7 +57,7 @@ class UserData(db.Model):
     suggestion = db.Column(db.String(10000), nullable=True)
 
     time_taken = db.Column(db.Integer, nullable=False)
-    time_stamp = db.Column(db.DateTime, default=datetime.utcnow(), nullable=False)
+    time_stamp = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
     def __repr__(self):
         return f'{self.__class__.__name__}({self.id}, {self.email}, {self.name})'
