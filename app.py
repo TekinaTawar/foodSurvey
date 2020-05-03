@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 from jsondata import getdishes as gd
+import requests
 
 
 app = Flask(__name__)
@@ -187,6 +188,29 @@ def suggestion():
 
 @app.route('/success')
 def success():
+    try:
+        r1 = requests.post(
+        'https://inatek.pythonanywhere.com/sendemail',
+        json = {
+            "name": session["user_name"],
+            "email": session["user_email"],
+    
+        "beveragesL": list(set(session['user_beveragesK']) - set(session['user_beveragesXL'])),
+        "snacksL": list(set(session['user_snacksK']) - set(session['user_snacksXL'])),
+        "main_coursesL": list(set(session['user_main_coursesK']) - set(session['user_main_coursesXL'])),
+        "othersL": list(set(session['user_othersK']) - set(session['user_othersXL'])),
+    
+        "beveragesXL": session['user_beveragesXL'],
+        "snacksXL": session['user_snacksXL'],
+        "main_coursesXL": session['user_main_coursesXL'],
+        "othersXL": session['user_othersXL']
+        },
+        timeout = 2
+        )
+        print(r1.status_code)
+        session.clear()
+    except:
+        pass
     return render_template('thank.html')
 
 
