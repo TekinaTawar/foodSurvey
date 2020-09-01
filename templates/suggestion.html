@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/button.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- StyleSheets end -->
 
     <!-- Google fonts -->
@@ -27,6 +29,9 @@
                 <div class="vh-max overflow-auto hide-sb pt-4" id="profile">
                     <!-- Profile Card -->
                     <div class="card mb-4 bg-light shadow-lg bg-white custom">
+                        <div class="w3-light-grey w3-round">
+                            <div class="w3-container w3-round w3-blue" style="width:80%" id="mybar">Suggestions</div>
+                          </div>
                         <div class="card-body px-2">
                             <h1>About Us</h1>
                             <hr class="style2">
@@ -52,7 +57,7 @@
                     <!-- Profile card ends here -->
                     <div class="submit_button">
                         <label>
-                            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                            <a href="thank.html"><input class="btn btn-primary btn-lg" value="Submit" /></a>
                         </label>
                     </div>
                 </div>
@@ -70,3 +75,18 @@
 </body>
 
 </html>
+<script>
+                               
+    var elem = document.getElementById("mybar");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 80) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  
+  </script>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/button.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- StyleSheets end -->
 
     <!-- Google fonts -->
@@ -25,6 +26,9 @@
         <form action="/page1" method="POST">
             <!-- CardForBeverages -->
             <div class="vh-max overflow-auto hide-sb pt-4" id="beverage">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:5%" id="mybar1">Q.1</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom">
                     <div class="mb-2">
                         <p class="h3 ssp">
@@ -48,15 +52,20 @@
                     <label>
                         <a class="btn btn-primary btn-lg" onclick="history.back()" href="#">Back</a>
                     </label>
-                    <a class="btn btn-primary btn-lg" href="#snacks" role="button">
-                        Next
-                    </a>
+                    <label><a class="btn btn-primary btn-lg" href="#snacks" role="button" style="width:126%;">
+                        ⬇
+                    </a></label>
                 </p>
             </div>
             <!-- CardForBeverages-Ends -->
 
-            <!-- CardForSnacks-->
+            <!-- CardForSnacks--> 
+            
+
             <div class="vh-max overflow-auto hide-sb pt-4" id="snacks">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:10%" id="mybar2">Q.1</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -90,7 +99,11 @@
 
 
             <!-- CardForMainCourse -->
+
             <div class="vh-max overflow-auto hide-sb pt-4" id="main_course">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:15%" id="mybar3">Q.1</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -116,13 +129,16 @@
                     </label>
 
                     <a class="btn btn-primary btn-lg" href="#others" role="button">
-                        Next
+                        ⬇
                     </a>
                 </p>
             </div>
             <!-- CardForMainCourse-Ends-->
             <!-- CardForOthers-->
             <div class="vh-max overflow-auto hide-sb pt-4" id="others">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:20%" id="mybar4">Q.1</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -155,7 +171,7 @@
                 </p>
             </div>
             <!-- CardForOthers Ends -->
-        </form>
+        </form> 
     </div>
 
     <!-- Main Container ends here -->
@@ -168,3 +184,52 @@
 </body>
 
 </html>
+<script>
+                               
+    var elem = document.getElementById("mybar1");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 5) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+
+    var elem = document.getElementById("mybar2");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 10) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+    var elem = document.getElementById("mybar3");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 15) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+    var elem = document.getElementById("mybar4");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >=20 ) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  
+  </script>
