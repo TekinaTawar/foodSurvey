@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/button.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- StyleSheets end -->
 
     <!-- Google fonts -->
@@ -25,6 +27,9 @@
         <form action="/page2" method="POST">
             <!-- CardForBeverages -->
             <div class="vh-max overflow-auto hide-sb pt-4" id="beverages">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:25%" id="mybar1">Q.2</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg  mb-5 bg-white rounded custom ">
                     <div class="mb-2">
                         <p class="h3 ssp">
@@ -49,15 +54,20 @@
                         <a class="btn btn-primary btn-lg" onclick="history.back()" href="#">Back</a>
                     </label>
 
-                    <a class="btn btn-primary btn-lg" href="#snacks" role="button">
-                        Next
+                    <label>
+                    <a class="btn btn-primary btn-lg" href="#snacks" role="button" style="width:126%">
+                        ⬇
                     </a>
+                    </label>
                 </p>
             </div>
             <!-- CardForBeverages-Ends -->
 
             <!-- CardForSnacks-->
             <div class="vh-max overflow-auto hide-sb pt-4" id="snacks">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:30%" id="mybar2">Q.2</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg p-3 mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -82,9 +92,11 @@
                         <a class="btn btn-primary btn-lg" href="#beverages">Back</a>
                     </label>
 
-                    <a class="btn btn-primary btn-lg" href="#main_course" role="button">
-                        Next
+                    <label>
+                    <a class="btn btn-primary btn-lg" href="#snacks" role="button" style="width: 126%">
+                        ⬇
                     </a>
+                </label>
                     <hr>
                 </p>
             </div>
@@ -93,6 +105,9 @@
 
             <!-- CardForMainCourse -->
             <div class="vh-max overflow-auto hide-sb pt-4" id="main_course">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:35%" id="mybar3">Q.2</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -117,14 +132,19 @@
                         <a class="btn btn-primary btn-lg" href="#snacks">Back</a>
                     </label>
 
-                    <a class="btn btn-primary btn-lg" href="#others" role="button">
-                        Next
+                    <label>
+                    <a class="btn btn-primary btn-lg" href="#snacks" role="button" style="width:126%">
+                        ⬇
                     </a>
+                    </label>
                 </p>
             </div>
             <!-- CardForMainCourse-Ends-->
             <!-- CardForOthers-->
             <div class="vh-max overflow-auto hide-sb pt-4" id="others">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" style="width:40%" id="mybar4">Q.2</div>
+                  </div>
                 <div class="card mb-4 bg-light shadow-lg custom  mb-5 bg-white rounded">
                      <div class="mb-2">
                         <p class="h3 ssp">
@@ -152,7 +172,7 @@
                     </label>
 
                     <label>
-                        <input class="btn btn-primary btn-lg" type="submit" value="Next Question" />
+                     <input class="btn btn-primary btn-lg" type="submit" value="Next Question" />
                     </label>
                 </p>
             </div>
@@ -170,5 +190,53 @@
 </body>
 
 </html>
+<script>
+                               
+    var elem = document.getElementById("mybar1");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 25) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
 
+    var elem = document.getElementById("mybar2");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 30) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+    var elem = document.getElementById("mybar3");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 35) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+    var elem = document.getElementById("mybar4");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 40) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  
+  </script>
 <!-- https://getbootstrap.com/docs/4.4/components/pagination/ -->

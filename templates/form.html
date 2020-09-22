@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/button.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- StyleSheets end -->
 
     <!-- Google fonts -->
@@ -34,6 +35,11 @@
                     <!-- alertends -->
                     <!-- Profile Card -->
                     <div class="card mb-4 bg-light shadow-lg bg-white rounded custom ">
+                        <div class="w3-light-grey w3-round">
+                            <div class="w3-container w3-round w3-blue" style="width:3%" id="mybar">0%</div>
+                          </div>
+
+                          
                         <div class="card-body p-4">
                             <span class="card-headings-custom">About You</span>
                             <p class="card-text text-secondary">To understand the data we have collected we'd need
@@ -160,7 +166,7 @@
 
 
                         <label>
-                            <input class="btn btn-primary btn-lg" type="submit" value="Next" />
+                           <a href="page1.html"> <input class="btn btn-primary btn-lg"  value="Next" /></a>
                         </label>
                     </div>
                     <hr>
@@ -179,3 +185,18 @@
 </body>
 
 </html>
+<script>
+                               
+    var elem = document.getElementById("mybar");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 3) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  
+  </script>
